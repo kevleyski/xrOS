@@ -1,0 +1,39 @@
+{
+  "name": "create-wasm-app",
+  "version": "0.1.0",
+  "description": "create an app to consume rust-generated wasm packages",
+  "main": "index.js",
+  "bin": {
+    "create-wasm-app": ".bin/create-wasm-app.js"
+  },
+  "scripts": {
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack --config webpack.config.js",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevleyski/create-wasm-app.git"
+  },
+  "keywords": [
+    "webassembly",
+    "wasm",
+    "rust",
+    "webpack"
+  ],
+  "author": "Kevin Staunton-Lambert <kevstal@meta.com>",
+  "license": "(MIT OR Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/kevleyski/create-wasm-app/issues"
+  },
+  "homepage": "https://github.com/kevleyski/create-wasm-app#readme",
+  "dependencies": {
+    "kevs-webgl-blit": "file:../pkg"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.0",
+    "kevs-webgl-blit": "^0.1.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
